@@ -1,0 +1,15 @@
+asgiref
+Django
+docutils
+importlib-metadata
+inflect
+jaraco.itertools
+more-itertools
+mpmath
+pytz
+six
+sqlparse
+sympy
+wolframalpha
+xmltodict
+zipp
