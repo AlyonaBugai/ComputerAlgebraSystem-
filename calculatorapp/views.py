@@ -18,6 +18,10 @@ def input(request):
         # r = eval(q)
         client = wolframalpha.Client('PL5HW2-Q2XGXA6RAV')
         res = client.query(q)
+        try:
+            pic = res['pod'][1]['subpod']['img']['@src']
+        except:
+            pic = res['pod'][1]['subpod'][1]['img']['@src']
         if not res:
             mydictionary = [{
                 "title": "Input",
@@ -28,7 +32,7 @@ def input(request):
             mydictionary = {
                 "q": q,
                 "ans": next(res.results).text,
-                "pic": res['pod'][1]['subpod']['img']['@src'],
+                "pic": pic,
                 "error": False,
                 "result": True
             }

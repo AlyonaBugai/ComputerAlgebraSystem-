@@ -13,7 +13,7 @@
   </head>
   <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Django Calculator App</a>
+        <a class="navbar-brand" href="/calculatorapp">Django Calculator App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -89,7 +89,7 @@
                 </p>
                 <hr>
                 <p class="lead" style="text-align: center;">
-                    Our Calculator app can perform mathematical operations
+                    Our Calculator app can perform mathematical operations and not only
                   </p>
               </div>
           </div>
@@ -100,18 +100,136 @@
               </p>
               <hr>
               <ul class="list-group">
-                <li class="list-group-item">+ Additon</li>
-                <li class="list-group-item">- Minus</li>
-                <li class="list-group-item">* Multiplication</li>
-                <li class="list-group-item">/ Division</li>
-                <li class="list-group-item">// Floor Division</li>
-                <li class="list-group-item">** Exponential</li>
-                <li class="list-group-item">% Mod</li>
-                <li class="list-group-item">( ) Parentheses</li>
+                  <div id="accordion">
+                      <div class="card">
+                          <div class="card-header" id="headingOne" >
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                      Mathematical Constants
+                                  </button>
+                              </h5>
+                          </div>
+
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Pi (π) — pi ≈ 3,14</li>
+                                  <li class="list-group-item">E (e) — exponential constant e ≈ 2,718</li>
+                                  <li class="list-group-item">Degree (°) — conversion factor from radians to degrees</li>
+                                  <li class="list-group-item">Infinity or inf — a symbol that represents a positive infinite quantity.</li>
+                                  <li class="list-group-item">n! — gives the factorial of n.</li>
+                                  <li class="list-group-item">Derivative (') — symbolic and numerical derivatives for arguments and parameters</li>
+                                  <li class="list-group-item">I (i) — root of -1</li>
+                                  <li class="list-group-item">Gamma[z] — the Euler gamma function </li>
+                                  <li class="list-group-item">Beta[a,b] — gives the Euler beta function .</li>
+                                  <li class="list-group-item">BesselJ[n,z] — gives the Bessel function of the first kind </li>
+                                  <li class="list-group-item">DifferentialRoot[lde][x] — gives the holonomic function , specified by the linear differential equation lde[h,x].</li>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingTwo">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Complex Numbers
+                                  </button>
+                              </h5>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Re[z] gives the real part of the complex number z.</li>
+                                  <li class="list-group-item">Im[z] gives the imaginary part of the complex number z.</li>
+                                  <li class="list-group-item">Abs — absolute value</li>
+                                  <li class="list-group-item">Arg — argument (phase angle in radians)</li>
+                                  <li class="list-group-item">Sign — normalized direction ()</li>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingThree">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      Arithmetic Functions
+                                  </button>
+                              </h5>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Plus (+) — addition of numbers, lists, arrays, or symbolic expressions</li>
+                                  <li class="list-group-item">Subtract (-) — subtraction</li>
+                                  <li class="list-group-item">Times (*) — multiplication </li>
+                                  <li class="list-group-item">Divide (/) — division</li>
+                                  <li class="list-group-item">Power (^ or **) — power</li>
+                                  <li class="list-group-item">Sqrt — square root</li>
+                                  <li class="list-group-item">% — Mod</li>
+                                  <li class="list-group-item">( ) — Parentheses</li>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingFour">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                      Numerical Functions
+                                  </button>
+                              </h5>
+                          </div>
+
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Min, Max — minimum, maximum of numbers or lists</li>
+                                  <li class="list-group-item">RealAbs — absolute value of real numbers</li>
+                                  <li class="list-group-item">Abs — absolute value of complex numbers</li>
+                                  <li class="list-group-item">Less (<)</li>
+                                  <li class="list-group-item">Greater (>)</li>
+                                  <li class="list-group-item">LessEqual (<=)</li>
+                                  <li class="list-group-item">GreaterEqual (>=)</li>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingFive">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                      Elementary Functions
+                                  </button>
+                              </h5>
+                          </div>
+
+                          <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Log — base-e logarithm (Log[b,x] uses base b)</li>
+                                  <li class="list-group-item">Log10, Log2 — base-10, base-2 logarithms</li>
+                                  <li class="list-group-item">Exp — exponential</li>
+                                  <li class="list-group-item">Sin ▪  Cos ▪  Tan ▪ ArcSin ▪ ArcCos ▪ ArcTan — Trigonometric Functions</li>
+                                  <li class="list-group-item">Sinh ▪ Cosh ▪ Tanh ▪ ArcSinh ▪ ArcCosh ▪ ArcTanh — Hyperbolic Functions</li>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingSix">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-outline-dark btn-lg btn-block" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                      Concepts of calculus
+                                  </button>
+                              </h5>
+                          </div>
+
+                          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                              <div class="card-body">
+                                  <li class="list-group-item">Limit[f, x to x*] — gives the limit of f(x).</li>
+                                  <li class="list-group-item">Integrate (a to b)(f(x), x) — gives the definite integral</li>
+                                  <li class="list-group-item">Integrate(f(x), x) — gives the indefinite integral</li>
+                                  <li class="list-group-item">f(x)' or derivate(f(x)) — represents the derivative of a function f of one argument.</li>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
 
               </ul>
             </div>
         </div>
+
           
       </div>
       
