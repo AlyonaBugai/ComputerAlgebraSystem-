@@ -17,17 +17,14 @@ def input(request):
         # r = g.eval(q)
         # r = eval(q)
         client = wolframalpha.Client('PL5HW2-Q2XGXA6RAV')
-        res = client.query(q)
         try:
-            pic = res['pod'][1]['subpod']['img']['@src']
-        except:
-            pic = res['pod'][1]['subpod'][1]['img']['@src']
-        if not res:
-            mydictionary = [{
-                "title": "Input",
-                "input": input,
-                "output": "Can't handle the input."
-            }]
+            res = client.query(q)
+            try:
+                pic = res['pod'][1]['subpod']['img']['@src']
+            except:
+                pic = res['pod'][1]['subpod'][1]['img']['@src']
+        except KeyError:
+            mydictionary = dict(title="Input", q=input, ans="Check that the data entry is correct", result=True)
         else:
             mydictionary = {
                 "q": q,
